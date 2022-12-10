@@ -1,0 +1,26 @@
+.avaAndNameContainer {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 30px;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.nameBlock {
+	flex-grow: 1;
+}
+
+.nameBlock h1 {
+	margin-block: 10px;
+}
+
+.editButton {
+	margin-block: 10px;
+	align-self: flex-start;
+}
+
+.projectBlock {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 15px;
+}

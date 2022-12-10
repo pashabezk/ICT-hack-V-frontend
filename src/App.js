@@ -4,12 +4,12 @@ import {ConfigProvider, Layout} from "antd";
 import {Content, Footer} from "antd/es/layout/layout";
 import {HashRouter, Navigate, Route, Routes} from "react-router-dom";
 import AppFooter from "./Components/Footer/Footer";
-import MessagesPage from "./Components/MessagesPage/MessagesPage";
+import ProjectsPage from "./Components/ProjectsPage/ProjectsPage";
 import AppHeader from "./Components/Header/Header";
 import TestPage from "./Components/TestPage/TestPage";
 
 const Login = React.lazy(() => import ("./Components/Login/Login"));
-const UserPage = React.lazy(() => import ("./Components/UserPage/UserPage"));
+const StudentProfilePage = React.lazy(() => import ("./Components/StudentProfilePage/StudentProfilePage"));
 
 const COLOR_MAP = {
 	primary: "#221183",
@@ -42,11 +42,11 @@ function App() {
 					<Content>
 						<React.Suspense fallback={<div>loading</div>}>
 							<Routes>
-								<Route path="/" element={<Navigate to="/test"/>}/>
+								{/*<Route path="/" element={<Navigate to="/test"/>}/>*/}
 								<Route path="/test" element={<TestPage/>}/>
-								{/*<Route path="/" element={<Navigate to="/profile"/>}/>*/}
-								<Route path="/profile" element={<UserPage/>}/>
-								<Route path="/messages" element={<MessagesPage/>}/>
+								<Route path="/" element={<Navigate to="/profile"/>}/>
+								<Route path="/profile" element={<StudentProfilePage/>}/>
+								<Route path="/projects" element={<ProjectsPage/>}/>
 								<Route path="/login" element={<Login/>}/>
 								<Route path="*" element={<Navigate to="/"/>}/>
 							</Routes>

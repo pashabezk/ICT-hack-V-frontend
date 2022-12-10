@@ -1,0 +1,10 @@
+.projectBlock {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 15px;
+}
+
+.projectCard {
+	width: 100%;
+	max-width: 200px;
+}

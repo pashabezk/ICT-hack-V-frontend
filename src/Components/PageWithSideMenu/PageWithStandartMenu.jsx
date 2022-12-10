@@ -1,12 +1,12 @@
 import React from "react";
-import {LinkOutlined, MailOutlined, UserOutlined} from "@ant-design/icons";
+import {ExperimentOutlined, LinkOutlined, UserOutlined} from "@ant-design/icons";
 import {Menu} from "antd";
 import styles from "./PageWithDefaultMenuSidebar.module.css"
 import {useLocation, useNavigate} from "react-router-dom";
 
 const menuItems = [
 	{label: 'Профиль', icon: <UserOutlined/>, key: 'profile'},
-	{label: 'Проекты', icon: <MailOutlined/>, key: 'messages'},
+	{label: 'Проекты', icon: <ExperimentOutlined/>, key: 'projects'},
 	{
 		label: 'Раскрывашка',
 		icon: <LinkOutlined/>,

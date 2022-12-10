@@ -35,6 +35,12 @@ html, body {
 	flex-direction: column;
 }
 
+h1 {
+	margin-block: 30px;
+	font-size: 24px;
+	font-family: "ALSGorizont", Golos, sans-serif;
+}
+
 .main-wrapper {
 	width: 100%;
 	min-height: 100%;

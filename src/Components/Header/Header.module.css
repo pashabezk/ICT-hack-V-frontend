@@ -26,6 +26,10 @@
 	font-weight: bold;
 }
 
+.logoContainer h1 {
+	margin-block: 10px;
+}
+
 .logoContainer > img {
 	margin-block: auto;
 	height: 50px;
