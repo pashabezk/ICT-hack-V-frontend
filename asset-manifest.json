@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/ICT-hack-V-frontend/static/css/main.cf28cb60.css",
+    "main.js": "/ICT-hack-V-frontend/static/js/main.55efeb8e.js",
+    "static/js/712.e9da6b5d.chunk.js": "/ICT-hack-V-frontend/static/js/712.e9da6b5d.chunk.js",
+    "static/js/66.a0ad0957.chunk.js": "/ICT-hack-V-frontend/static/js/66.a0ad0957.chunk.js",
+    "static/js/787.55f9c18c.chunk.js": "/ICT-hack-V-frontend/static/js/787.55f9c18c.chunk.js",
+    "static/js/519.4addbfb8.chunk.js": "/ICT-hack-V-frontend/static/js/519.4addbfb8.chunk.js",
+    "index.html": "/ICT-hack-V-frontend/index.html",
+    "main.cf28cb60.css.map": "/ICT-hack-V-frontend/static/css/main.cf28cb60.css.map",
+    "main.55efeb8e.js.map": "/ICT-hack-V-frontend/static/js/main.55efeb8e.js.map",
+    "712.e9da6b5d.chunk.js.map": "/ICT-hack-V-frontend/static/js/712.e9da6b5d.chunk.js.map",
+    "66.a0ad0957.chunk.js.map": "/ICT-hack-V-frontend/static/js/66.a0ad0957.chunk.js.map",
+    "787.55f9c18c.chunk.js.map": "/ICT-hack-V-frontend/static/js/787.55f9c18c.chunk.js.map",
+    "519.4addbfb8.chunk.js.map": "/ICT-hack-V-frontend/static/js/519.4addbfb8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cf28cb60.css",
+    "static/js/main.55efeb8e.js"
+  ]
+}
