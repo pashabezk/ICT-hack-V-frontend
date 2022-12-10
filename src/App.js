@@ -4,12 +4,13 @@ import {ConfigProvider, Layout} from "antd";
 import {Content, Footer} from "antd/es/layout/layout";
 import {HashRouter, Navigate, Route, Routes} from "react-router-dom";
 import AppFooter from "./Components/Footer/Footer";
-import ProjectsPage from "./Components/ProjectsPage/ProjectsPage";
 import AppHeader from "./Components/Header/Header";
 import TestPage from "./Components/TestPage/TestPage";
+import ProjectPage from "./Components/ProjectPage/ProjectPage";
 
 const Login = React.lazy(() => import ("./Components/Login/Login"));
 const StudentProfilePage = React.lazy(() => import ("./Components/StudentProfilePage/StudentProfilePage"));
+const ProjectsPage = React.lazy(() => import ("./Components/ProjectsPage/ProjectsPage"));
 
 const COLOR_MAP = {
 	primary: "#221183",
@@ -17,7 +18,6 @@ const COLOR_MAP = {
 	accent: "#52A874",
 	secondary: "#7B45EC"
 };
-
 
 function App() {
 	return (
@@ -33,7 +33,6 @@ function App() {
 				},
 			}}
 		>
-
 			{/*HashRouter only for GitHub pages*/}
 			{/*< BrowserRouter basename={process.env.PUBLIC_URL}> // use instead HashRouter in real project*/}
 			<HashRouter>
@@ -42,8 +41,8 @@ function App() {
 					<Content>
 						<React.Suspense fallback={<div>loading</div>}>
 							<Routes>
-								{/*<Route path="/" element={<Navigate to="/test"/>}/>*/}
 								<Route path="/test" element={<TestPage/>}/>
+								<Route path="/project" element={<ProjectPage/>}/>
 								<Route path="/" element={<Navigate to="/profile"/>}/>
 								<Route path="/profile" element={<StudentProfilePage/>}/>
 								<Route path="/projects" element={<ProjectsPage/>}/>

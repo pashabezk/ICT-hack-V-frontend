@@ -1,0 +1,22 @@
+.nameBlock {
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 10px;
+	row-gap: 0;
+	margin-bottom: 15px;
+}
+
+.nameBlock p,
+.nameBlock h1 {
+	margin-block: 5px;
+}
+
+.nameBlock p {
+	font-size: 1.3rem;
+}
+
+.buttonAlignedEnd {
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 15px;
+}
