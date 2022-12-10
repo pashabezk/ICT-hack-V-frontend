@@ -29,7 +29,7 @@ const AppHeader = () => {
 				<div className={styles.logoContainer}>
 					{/*<img className={styles.pishLogo} src={pishLogo} alt="pish logo"/>*/}
 					{/*<img src={itmoLogo} alt="itmo logo"/>*/}
-					<h1>SiteName</h1>
+					<h1>ИТМО × ПИШ</h1>
 				</div>
 				<div className={styles.headerColumnRight}>
 					{

@@ -1,33 +1,47 @@
 import React from "react";
 import styles from "./ProjectPage.module.css"
-import {Button} from "antd";
+import {Button, Spin} from "antd";
+import {useDispatch, useSelector} from "react-redux";
+import {selectIsLoadingProjectData, selectProjectData, selectProjectId, tryGetProjectDataAsync} from "../../Redux/ProjectsReducer";
+
+const CenteredSpin = () => {
+	return(
+		<div className={styles.centeredSpin}>
+			<Spin tip="Подгружаем данные" size="default"/>
+		</div>
+	);
+}
 
 const ProjectPage = () => {
 
-	const project = {
-		id: 16,
-		title: "Создание блокчейна",
-		owner: "Банк Крипто",
-		description: "Основной целью данного проекта является создание программного обеспечения гирокресла с широким спектром доступных опций.",
-		precondition: "Gyromove – многофункциональное электроприводное устройство на основе машинного обучения отечественного производства, позволяющее людям с ограниченными возможностями, свободно передвигаться в пространстве без дополнительной помощи, подниматься по ступеням и менять уровень высоты положения для различных целей",
-		result: "Программное обеспечение для автономного функционирования устройства обеспечивающее широкий точный контроль и ориентацию в пространстве",
-		criterias: "1. Все мероприятия проведены в срок и без технических сбоев.\n2. Все материалы оформлены в корпоративном стиле компании.",
-	};
+	const projectId = useSelector(selectProjectId);
+	const projectData = useSelector(selectProjectData);
+	const isLoadingProjectData = useSelector(selectIsLoadingProjectData);
+	const dispatch = useDispatch();
+
+	if(isLoadingProjectData) {
+		return <CenteredSpin/>
+	}
+
+	if (!projectData) {
+		dispatch(tryGetProjectDataAsync({projectId}))
+		return <CenteredSpin/>
+	}
 
 	return (
 		<div>
 			<div className={styles.nameBlock}>
-				<h1>{project.title}</h1>
+				<h1>{projectData.title}</h1>
 				<p>/</p>
-				<h1>{project.owner}</h1>
+				<h1>{projectData.owner}</h1>
 			</div>
-			<p>{project.description}</p>
+			<p>{projectData.description}</p>
 			<h1>Каковы предпосылки проекта?</h1>
-			<p>{project.precondition}</p>
+			<p>{projectData.precondition}</p>
 			<h1>Что представляет собой результат работы?</h1>
-			<p>{project.result}</p>
+			<p>{projectData.result}</p>
 			<h1>По каким критериям будут оценивать результат?</h1>
-			<p>{project.criterias}</p>
+			<p>{projectData.criterias}</p>
 			<div className={styles.buttonAlignedEnd}>
 				<Button type="primary">Оставить заявку на участие</Button>
 			</div>
