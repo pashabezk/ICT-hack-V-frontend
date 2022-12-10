@@ -7,7 +7,7 @@ const axiosInstance = axios.create({
 });
 
 export const testStatus = () => {
-	return axiosInstance.get(`hello`);
+	return axiosInstance.get(`hello/`);
 }
 
 // const getProfile = (userId) => {

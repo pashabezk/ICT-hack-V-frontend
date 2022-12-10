@@ -28,7 +28,8 @@ function App() {
 					colorPrimary: COLOR_MAP.primary,
 					colorInfo: COLOR_MAP.primary,
 					colorSuccess: COLOR_MAP.accent,
-					colorInfoText: COLOR_MAP.secondary
+					colorInfoText: COLOR_MAP.secondary,
+					fontFamily: "Golos, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'"
 				},
 			}}
 		>
