@@ -1,8 +1,8 @@
 {
-  "name": "ant-design-learning",
+  "name": "ict-hack-v-frontend",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://pashabezk.github.io/ICT-hack-v-frontend/",
+  "homepage": "https://pashabezk.github.io/ICT-hack-V-frontend/",
   "dependencies": {
     "@ant-design/icons": "^4.8.0",
     "@reduxjs/toolkit": "^1.9.1",
