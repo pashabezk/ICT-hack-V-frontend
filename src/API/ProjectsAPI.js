@@ -56,7 +56,7 @@ const project = {
 
 
 const axiosInstance = axios.create({
-	baseURL: "https://127.0.0.1:8000/",
+	baseURL: "http://127.0.0.1:8000/",
 	withCredentials: true
 });
 
@@ -65,7 +65,7 @@ export const fetchAllProjects = () => {
 }
 
 export function fetchProjectData({projectId}) {
-	return axiosInstance.get(`projects/`+projectId+'/');
+	return axiosInstance.get(`project/`+projectId+'/');
 }
 
 // export function fetchAllProjects() {

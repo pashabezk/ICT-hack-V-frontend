@@ -35,7 +35,7 @@ export const tryGetProjectDataAsync = createAsyncThunk(
 	'projects/tryGetProjectData',
 	async (projectId) => {
 		const response = await fetchProjectData(projectId);
-		return response.data;
+		return response.data.projects;
 	}
 );
 

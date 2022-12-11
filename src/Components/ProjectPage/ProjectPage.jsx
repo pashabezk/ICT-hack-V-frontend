@@ -33,7 +33,7 @@ const ProjectPage = () => {
 			<div className={styles.nameBlock}>
 				<h1>{projectData.title}</h1>
 				<p>/</p>
-				<h1>{projectData.owner}</h1>
+				<h1>{projectData.host_company}</h1>
 			</div>
 			<p>{projectData.description}</p>
 			<h1>Каковы предпосылки проекта?</h1>

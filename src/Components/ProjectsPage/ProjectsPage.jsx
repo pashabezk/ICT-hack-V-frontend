@@ -23,7 +23,7 @@ const ProjectsPage = () => {
 		}
 
 
-	const temp = useSelector(selectTemp);
+	const temp = useSelector(selectTemp); // ля отследивания кол-ва запросов, в будующем убрать
 	if (temp < 3)
 		if (!allProjectsIsLoading)
 			if (allProjects === null) {
