@@ -1,3 +1,5 @@
+import axios from "axios";
+
 const participatedProjects = [{
 	id: 1,
 	title: "Приложение по расчёту нефтегазовой прибыли",
@@ -52,13 +54,23 @@ const project = {
 	criterias: "1. Все мероприятия проведены в срок и без технических сбоев.\n2. Все материалы оформлены в корпоративном стиле компании.",
 };
 
-export function fetchAllProjects() {
-	return new Promise((resolve) =>
-		setTimeout(() => {
-			resolve({data: allProjects})
-		}, 1000)
-	);
+
+const axiosInstance = axios.create({
+	baseURL: "https://127.0.0.1:8000/",
+	withCredentials: true
+});
+
+export const fetchAllProjects = () => {
+	return axiosInstance.get(`projects/`);
 }
+
+// export function fetchAllProjects() {
+// 	return new Promise((resolve) =>
+// 		setTimeout(() => {
+// 			resolve({data: allProjects})
+// 		}, 1000)
+// 	);
+// }
 
 export function fetchParticipatedProjects() {
 	return new Promise((resolve) =>
