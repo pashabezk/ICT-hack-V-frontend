@@ -68,6 +68,10 @@ export function fetchProjectData({projectId}) {
 	return axiosInstance.get(`project/`+projectId+'/');
 }
 
+export function fetchStudentData({studentId}) {
+	return axiosInstance.get(`student/`+studentId+'/');
+}
+
 // export function fetchAllProjects() {
 // 	return new Promise((resolve) =>
 // 		setTimeout(() => {
