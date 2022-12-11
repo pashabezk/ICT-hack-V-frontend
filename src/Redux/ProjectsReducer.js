@@ -10,7 +10,9 @@ const initialState = {
 	projectId: null,
 	projectData: null,
 	isLoadingProjectData: false,
-	isOpenedModalWithProject: false
+	isOpenedModalWithProject: false,
+
+	temp: 0
 };
 
 export const tryGetAllProjectsAsync = createAsyncThunk(
@@ -54,6 +56,7 @@ export const projectsSlice = createSlice({
 	extraReducers: (builder) => {
 		builder
 			.addCase(tryGetAllProjectsAsync.pending, (state) => {
+				state.temp += 1;
 				state.allProjectsIsLoading = true;
 			})
 			.addCase(tryGetAllProjectsAsync.fulfilled, (state, action) => {
@@ -98,6 +101,8 @@ export const selectIsOpenedModalWithProject = (state) => state.projects.isOpened
 export const selectProjectId = (state) => state.projects.projectId;
 export const selectProjectData = (state) => state.projects.projectData;
 export const selectIsLoadingProjectData = (state) => state.projects.isLoadingProjectData;
+
+export const selectTemp = (state) => state.projects.temp;
 
 
 export default projectsSlice.reducer;

@@ -4,7 +4,7 @@ import withAuthRedirect from "../HOC/withAuthRedirect";
 import ProjectShortCard from "./ProjectShortCard";
 import styles from "../StudentProfilePage/StudentProfilePage.module.css";
 import {useDispatch, useSelector} from "react-redux";
-import {selectAllProjects, selectAllProjectsIsLoading, selectIsOpenedModalWithProject, selectParticipatedProjects, selectParticipatedProjectsIsLoading, toggleIsModalWithProjectOpened, tryGetAllProjectsAsync, tryGetParticipatedProjectsAsync} from "../../Redux/ProjectsReducer";
+import {selectAllProjects, selectAllProjectsIsLoading, selectIsOpenedModalWithProject, selectParticipatedProjects, selectParticipatedProjectsIsLoading, selectTemp, toggleIsModalWithProjectOpened, tryGetAllProjectsAsync, tryGetParticipatedProjectsAsync} from "../../Redux/ProjectsReducer";
 import {Modal, Spin} from "antd";
 import ProjectPage from "../ProjectPage/ProjectPage";
 
@@ -14,16 +14,21 @@ const ProjectsPage = () => {
 	const participatedProjectsIsLoading = useSelector(selectParticipatedProjectsIsLoading);
 	const allProjects = useSelector(selectAllProjects);
 	const allProjectsIsLoading = useSelector(selectAllProjectsIsLoading);
-	const isModalOpen = useSelector(selectIsOpenedModalWithProject)
+	const isModalOpen = useSelector(selectIsOpenedModalWithProject);
 	const dispatch = useDispatch();
 
-	if (participatedProjects === null) {
-		dispatch(tryGetParticipatedProjectsAsync());
-	}
+	if (!participatedProjectsIsLoading)
+		if (participatedProjects === null) {
+			dispatch(tryGetParticipatedProjectsAsync());
+		}
 
-	if (allProjects === null) {
-		dispatch(tryGetAllProjectsAsync());
-	}
+
+	const temp = useSelector(selectTemp);
+	if (temp < 3)
+		if (!allProjectsIsLoading)
+			if (allProjects === null) {
+				dispatch(tryGetAllProjectsAsync());
+			}
 
 	const projectsToCards = (projectArr) => {
 		if (projectArr)
