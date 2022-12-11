@@ -1,5 +1,5 @@
 import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
-import {fetchProjectData, fetchStudentData} from "../API/ProjectsAPI";
+import {fetchStudentData} from "../API/ProjectsAPI";
 
 const initialState = {
 	student: null,

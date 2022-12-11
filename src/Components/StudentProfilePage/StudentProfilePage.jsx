@@ -62,7 +62,7 @@ const StudentProfilePage = () => {
 	const dispatch = useDispatch();
 
 	if (!student || !isLoading) {
-		dispatch(tryGetStudentDataAsync(1));
+		dispatch(tryGetStudentDataAsync(2));
 		return <Spin tip="Подгружаем данные"/>
 	}
 
