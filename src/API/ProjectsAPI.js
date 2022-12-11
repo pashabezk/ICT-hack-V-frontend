@@ -64,6 +64,10 @@ export const fetchAllProjects = () => {
 	return axiosInstance.get(`projects/`);
 }
 
+export function fetchProjectData({projectId}) {
+	return axiosInstance.get(`projects/`+projectId+'/');
+}
+
 // export function fetchAllProjects() {
 // 	return new Promise((resolve) =>
 // 		setTimeout(() => {
@@ -80,10 +84,10 @@ export function fetchParticipatedProjects() {
 	);
 }
 
-export function fetchProjectData({projectId}) {
-	return new Promise((resolve) =>
-		setTimeout(() => {
-			resolve({data: project})
-		}, 2000)
-	);
-}
+// export function fetchProjectData({projectId}) {
+// 	return new Promise((resolve) =>
+// 		setTimeout(() => {
+// 			resolve({data: project})
+// 		}, 2000)
+// 	);
+// }
